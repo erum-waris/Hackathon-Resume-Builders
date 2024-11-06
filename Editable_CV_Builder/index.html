@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editable Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Editable Resume Builder</h1>
+
+      <form id="resume-form">
+        <label for="picture">Profile Picture (Upload from PC):</label>
+        <div class="picture-input">
+          <input type="file" id="profilePicture" accept="image/*" required />
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Your Name" />
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="example@email.com" />
+
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" placeholder="+123456789" />
+        </div>
+
+        <label for="experience">Experience:</label>
+        <textarea
+          id="experience"
+          placeholder="Describe your experience..."
+        ></textarea>
+
+        <label for="work">Work:</label>
+        <textarea id="work" placeholder="Describe your work..."></textarea>
+
+        <label for="skills">Skills:</label>
+        <input
+          type="text"
+          id="skills"
+          placeholder="e.g. HTML, CSS, TypeScript"
+        />
+
+        <button type="button" id="generate-resume">Generate Resume</button>
+      </form>
+
+      <!-- Generated Resume From Given Info -->
+
+      <div id="resume-popup" class="hidden">
+        <h2 id="heading">Resume Generated</h2>
+        <p class="para">Your resume is generated below. You can edit it.</p>
+        <h2 id="heading">Personal Info</h2>
+        <div id="generated-resume"></div>
+
+        <button id="edit-resume">Edit Resume</button>
+        <p class="para">Thank you for using the Resume Builder !!!</p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

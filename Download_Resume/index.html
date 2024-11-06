@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shareable Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container" >
+  
+
+    <form id="resume-form">
+      <h1 id="main-heading">Shareable Resume Builder</h1>
+
+      <label for="picture">Profile Picture (Upload from PC):</label>
+      <div class="picture-input">
+      
+        <input type="file" id="profilePicture" accept="image/*" required>
+
+        <label for="ResumeURL">Unique Url:</label>
+        <input type="text" id="resumeURL" placeholder="Enter Your Unique Resume URL" required>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Your Name">
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="example@email.com">
+
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" placeholder="+123456789">
+
+     
+      </div>
+
+      <label for="education">Education:</label>
+      <textarea id="education" placeholder="Enter your Qualification..."></textarea>
+
+      <label for="experience">Experience:</label>
+      <textarea id="experience" placeholder="Describe your experience..."></textarea>
+
+      <label for="skills">Skills:</label>
+      <input type="text" id="skills" placeholder="e.g. HTML, CSS, TypeScript">
+
+      <button type="button" id="generate-resume">Generate Resume</button> 
+      <button type="button" id="download-pdf" >Download PDF</button>
+      <button type="button" id="share-link">Share Resume Link</button>
+
+    </form>
+
+    <!-- Generated Resume From Given Info -->
+<section>
+    <div id="resume-popup" class="hidden">
+      <h2 id="heading">Resume Generated</h2>
+      
+      <h2 id="heading"> Personal Info</h2>
+      <div id="generated-resume"></div>
+      
+      <button id="edit-resume">Edit Resume</button>
+      
+    </div>
+  </div>
+</section>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <h1 class="heading_1">Dynamic Resume Builder</h1>
+
+    <!-- Form for user input -->
+    <form id="resumeForm">
+        <h1 class="heading_2">Personal Information</h1> 
+
+        <label for="profilePicture"><b>Profile Image:</b></label>
+        <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+
+        <br>
+        <label for="name"><b>Name:</b></label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="email"><b>Email:</b></label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="phone"><b>Phone No:</b></label>
+        <input type="tel" id="phone" required>
+        <br>
+        <label for="DOB"><b>Date of Birth:</b></label>
+
+        <input type="date" id="DateOfBirth" required>
+        <br>
+    
+     
+        <label for="education"><b>Education:</b></label>
+        <input type="text" id="education" required>
+        <br>
+
+     
+        <label for="experience"><b>Work Experience:</b></label>
+        <textarea name="experience" id="experience" rows="4" required></textarea>
+        <br>
+
+        
+        <label for="skills"><b>Skills (Use &):</b></label>
+        <textarea name="skills" id="skills" rows="4" required></textarea>
+        <br>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+
+<!-- Section where resume generated -->
+
+<section id="resume" >
+    <h1 class="heading">Generated Resume</h1>
+    <br>
+    <br>
+   <h2 class="heading">Personal Info</h2> 
+  
+    <header>
+        
+        
+        <img id="displayProfilePhoto" alt="Passport-photo" >
+        <br>
+        <h2 class="heading" id="displayName"></h2>
+        <p class="para" id="displayEmail"></p>
+        <p class="para"  id="displayPhone"></p>
+        <p class="para"  id="displayDateOfBirth"></p>
+        
+    </header>
+
+    <section id="displayEducation">
+        <h2  class="heading" >Education</h2>
+       <p class="para" ></p>
+    </section>
+
+    <section id="displayExperience">
+        <h2  class="heading" >Work Experience</h2>
+     <p class="para" ></p>
+    </section>
+
+    <section id="displaySkills">
+        <h2  class="heading">Skills</h2>
+        <ul></ul>
+    </section>
+</section>
+   
+    <script src="script.js"></script>
+</body>
+</html>
